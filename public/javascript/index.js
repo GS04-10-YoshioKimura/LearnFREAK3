@@ -123,8 +123,8 @@ $(function () {
             }, 100);
             ds.push({
                 title: "タイトル",
-                room: "room1",
-                //room: currentRoom,
+                //room: "room1",
+                room: currentRoom,
                 content: content,
                 good: 0,
                 date: new Date().getTime()
