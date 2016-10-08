@@ -1,4 +1,5 @@
 
+alert();
 var goods = {};
 //1.ミルクココアインスタンスを作成
 var milkcocoa = new MilkCocoa('flagimsrjhlt.mlkcca.com');
