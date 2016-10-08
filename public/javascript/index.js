@@ -5,7 +5,7 @@ var milkcocoa = new MilkCocoa('flagimsrjhlt.mlkcca.com');
 //2."message"データストアを作成
 var ds = milkcocoa.dataStore("message");
 var ds_clients = milkcocoa.dataStore("clients");
-var socket = io("http://localhost:3000");
+var socket = io("https://glacial-escarpment-63534.herokuapp.com/");
 
 socket.on('vote',function(data){
   console.log(data);
