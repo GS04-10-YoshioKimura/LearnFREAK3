@@ -6,7 +6,7 @@ var milkcocoa = new MilkCocoa('flagimsrjhlt.mlkcca.com');
 var ds = milkcocoa.dataStore("message");
 var ds_clients = milkcocoa.dataStore("clients");
 //var socket = io("https://glacial-escarpment-63534.herokuapp.com/");
-var socket = io("http://localhost:3010/");
+var socket = io("http://localhost:3000/");
 
 socket.on('vote',function(data){
   console.log(data);
