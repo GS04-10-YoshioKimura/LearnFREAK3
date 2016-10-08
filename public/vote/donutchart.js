@@ -2,11 +2,11 @@ $(function () {
     var radiobtn1 = document.getElementById("off");
     var radiobtn2 = document.getElementById("on");
 
-    if (radiobtn1.checked == true) {
-        //alert("offがチェックされています。");
-    } else if (radiobtn2.checked == true) {
-        //alert("onがチェックされています。");
-    }
+    // if (radiobtn1.checked == true) {
+    //     //alert("offがチェックされています。");
+    // } else if (radiobtn2.checked == true) {
+    //     //alert("onがチェックされています。");
+    // }
 
     var know;
     know = Math.floor(Math.random() * 100) + 1;
