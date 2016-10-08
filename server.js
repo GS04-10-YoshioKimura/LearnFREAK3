@@ -1,4 +1,4 @@
-var http = require('https');
+var http = require('http');
 var path = require('path');
 
 var socketio = require('socket.io');
