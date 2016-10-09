@@ -22,14 +22,14 @@
 <body>
     <script async="" src=""></script>
 
-<!--
+    <!--
     <div id='vote'>
         <input type='button' value="good" id='good'></input>
         <input type='button' value="bad" id='bad'></input>
     </div> -->
 
 
-<div class="xxx">
+    <div class="xxx">
         <div id="percent"></div>
         <canvas id="ugCanvas"></canvas>
         <div class="btn01">
@@ -49,7 +49,7 @@
                     <!-- <div class="app-name"></div> -->
                     <!-- <a href="http://gsacademy.tokyo/" target="_blank"></a> -->
                 </div>
-                 <p>接続数:<span id="count"></span></p>
+                <p>接続数:<span id="count"></span></p>
                 <div class="user-view"><img class="ico" src="">
                     <div class="name"></div>
                     <a class="sign-out"></a>
@@ -82,30 +82,19 @@
             <div id="complete-btn">入力完了</div>
         </div>
     </div>
+
+    <!-- <script>
+
+    </script> -->
+
+
+
+
     <script type="text/javascript" src="./javascript/index.js"></script>
     <script type="text/javascript" src="./javascript/urlAutolink.js"></script>
     <script type="text/javascript" src="./vote/Chart.js"></script>
     <link rel="stylesheet" href="./vote/index.css">
     <script src="./vote/donutchart.js"></script>
-    <script>
-      var socket = io.connect();
-      var $count = $('#count');
-      var $goods = $('#goo');
-
-      socket.on('count', function(setsuzoku) {
-          //alert(setsuzoku);
-          var ddd = " "+setsuzoku;
-          var goo = goods;
-          $count.text(ddd);
-
-      });
-// socket.on('goo', function(){
-//   console.log(sums);
-//});
-
-
-
-  </script>
 
 </body>
 
