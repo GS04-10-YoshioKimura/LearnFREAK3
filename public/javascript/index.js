@@ -25,10 +25,10 @@ $('#off').click(function(){
   socket.emit('vote','bad');
 });
 
-socket.on('vote',function(data){
-  console.log(data.good);
-    alert(data.good + "です。");
-});
+// socket.on('vote',function(data){
+//   console.log(data.good);
+//     alert(data.good + "です。");
+// });
 
 
 function addGoodCount(id) {
