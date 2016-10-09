@@ -19,13 +19,13 @@ io.on('connection', function (socket) {
   };
 
   io.sockets.emit('count', socket.client.conn.server.clientsCount);
-  console.log(socket.client.conn.server.clientsCount);
 
   socket.on('vote', function(data){
+    console.log(data);
     clients[socket.id].vote = data; // good or bad
     var result = calcVote(clients);
     io.sockets.emit('vote', result);
-    //console.log(result);
+    console.log(result);
   });
 
   socket.on('disconnect', function() {
@@ -35,7 +35,6 @@ io.on('connection', function (socket) {
 
 
 });
-
 
 var calcVote = function(calcclients){
   var sums = {
@@ -54,8 +53,7 @@ var calcVote = function(calcclients){
     }
   });
   return sums;
-  io.sockets.emit('goo', sums.good);
-  console.log(sums.good);
+  console.log(sums);
 };
 
 server.listen(process.env.PORT || 3010, process.env.IP || "0.0.0.0", function(){
