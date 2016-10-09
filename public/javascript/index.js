@@ -4,7 +4,7 @@ var milkcocoa = new MilkCocoa('flagimsrjhlt.mlkcca.com');
 //2."message"データストアを作成
 var ds = milkcocoa.dataStore("message");
 var ds_clients = milkcocoa.dataStore("clients");
-var socket = io("https://dry-scrubland-57685.herokuapp.com/");
+var socket = io("https://learn-freak.herokuapp.com/");
 //var socket = io("http://localhost:3000/");
 
 socket.on('vote',function(data){
