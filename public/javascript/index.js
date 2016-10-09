@@ -162,4 +162,3 @@ function iine(inputElement) {
         good: getGoodCount(id)
     });
 }
-console.log(socket.id);

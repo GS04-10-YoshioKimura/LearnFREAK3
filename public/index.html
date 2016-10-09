@@ -93,7 +93,7 @@
       var $goods = $('#goo');
 
       socket.on('count', function(data) {
-          // alert();
+          alert(data);
           var ddd = " "+data;
           var goo = goods;
           $count.text(ddd);
