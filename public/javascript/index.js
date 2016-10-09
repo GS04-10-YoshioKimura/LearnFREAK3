@@ -4,8 +4,9 @@ var milkcocoa = new MilkCocoa('flagimsrjhlt.mlkcca.com');
 //2."message"データストアを作成
 var ds = milkcocoa.dataStore("message");
 var ds_clients = milkcocoa.dataStore("clients");
-var socket = io("https://learn-freak.herokuapp.com/");
-//var socket = io("http://localhost:3000/");
+// var socket = io("https://learn-freak.herokuapp.com/");
+// var socket = io("http://localhost:3000/");
+var socket = io("http://localhost:3010/");
 
 socket.on('vote',function(data){
   console.log(data);
@@ -19,12 +20,13 @@ function getGoodCount(id) {
     }
 }
 
-$('#good').click(function(){
-  console.log("good");
+$('#on').click(function(){
+  console.log("う〜ん。。");
   socket.emit('vote',{state:"good"});
 });
 
-$('#bad').click(function(){
+$('#off').click(function(){
+  console.log("なるほど！");
   socket.emit('vote','bad');
 });
 

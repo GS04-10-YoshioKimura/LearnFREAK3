@@ -10,7 +10,7 @@ var io = socketio.listen(server);
 
 router.use(express.static(path.resolve(__dirname, 'public')));
 
-var clients = [];
+var clients = {};
 
 io.on('connection', function (socket) {
   console.log("ID: "+socket.id.substring(2)+"has connected");
@@ -39,7 +39,8 @@ var calcVote = function(calcclients){
     good:0,
     bad:0
   };
-  calcclients.forEach(function(client){
+  Object.keys(calcclients).forEach(function(id){
+    var client = calcclients[id];
     switch (client.vote) {
       case 'good' :
       sums.good += 1;
