@@ -88,14 +88,23 @@
     <link rel="stylesheet" href="./vote/index.css">
     <script src="./vote/donutchart.js"></script>
     <script>
-        var socket = io.connect();
+      var socket = io.connect();
       var $count = $('#count');
+      var $goods = $('#goo');
 
       socket.on('count', function(data) {
           // alert();
           var ddd = " "+data;
+          var goo = goods;
           $count.text(ddd);
+
       });
+socket.on('goo', function(){
+  console.log(sums);
+});
+
+
+
   </script>
 
 </body>

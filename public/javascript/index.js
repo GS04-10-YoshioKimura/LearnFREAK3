@@ -7,7 +7,6 @@ var ds_clients = milkcocoa.dataStore("clients");
 // var socket = io("https://learn-freak.herokuapp.com/");
 // var socket = io("http://localhost:3000/");
 var socket = io("http://localhost:3010/");
-
 socket.on('vote',function(data){
   console.log(data);
 });
@@ -19,14 +18,14 @@ function getGoodCount(id) {
         return 0;
     }
 }
-
+console.log(socket);
 $('#on').click(function(){
-  console.log("う〜ん。。");
-  socket.emit('vote',{state:"good"});
+  console.log("なるほど！");
+  socket.emit('vote','good');
 });
 
 $('#off').click(function(){
-  console.log("なるほど！");
+  console.log("う〜ん。。");
   socket.emit('vote','bad');
 });
 
@@ -163,3 +162,4 @@ function iine(inputElement) {
         good: getGoodCount(id)
     });
 }
+console.log(socket.id);
