@@ -6,7 +6,7 @@ $(function() {
 
     socket.on('count', function(setsuzoku) {
         //alert(setsuzoku);
-        var ddd = " " + setsuzoku / 2;
+        var ddd = " " + setsuzoku;
         $count.text(ddd);
 
         var know;

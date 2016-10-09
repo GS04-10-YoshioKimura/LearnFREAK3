@@ -4,8 +4,8 @@ var milkcocoa = new MilkCocoa('flagimsrjhlt.mlkcca.com');
 //2."message"データストアを作成
 var ds = milkcocoa.dataStore("message");
 var ds_clients = milkcocoa.dataStore("clients");
-// var socket = io("https://learn-freak.herokuapp.com/");
-var socket = io("http://localhost:3010/");
+var socket = io("https://learn-freak.herokuapp.com/");
+//var socket = io("http://localhost:3010/");
 
 function getGoodCount(id) {
     if (goods[id]) {
