@@ -5,11 +5,7 @@ var milkcocoa = new MilkCocoa('flagimsrjhlt.mlkcca.com');
 var ds = milkcocoa.dataStore("message");
 var ds_clients = milkcocoa.dataStore("clients");
 // var socket = io("https://learn-freak.herokuapp.com/");
-// var socket = io("http://localhost:3000/");
 var socket = io("http://localhost:3010/");
-socket.on('vote',function(data){
-  console.log(data);
-});
 
 function getGoodCount(id) {
     if (goods[id]) {
@@ -18,15 +14,20 @@ function getGoodCount(id) {
         return 0;
     }
 }
-console.log(socket);
+
 $('#on').click(function(){
   console.log("なるほど！");
   socket.emit('vote','good');
 });
 
 $('#off').click(function(){
-  console.log("う〜ん。。");
+  // console.log("う〜ん。。");
   socket.emit('vote','bad');
+});
+
+socket.on('vote',function(data){
+  console.log(data.good);
+    alert(data.good + "です。");
 });
 
 
@@ -59,7 +60,7 @@ $(function () {
         $("#title").html(hostname);
         //栗林追記
         currentRoom = $('#name').val();
-        console.log(currentRoom);
+        //console.log(currentRoom);
         $('.app-link').after().text(currentRoom + 'に入室中！');
         loginComplete();
     });

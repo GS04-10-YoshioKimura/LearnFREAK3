@@ -92,16 +92,16 @@
       var $count = $('#count');
       var $goods = $('#goo');
 
-      socket.on('count', function(data) {
-          alert(data);
-          var ddd = " "+data;
+      socket.on('count', function(setsuzoku) {
+          //alert(setsuzoku);
+          var ddd = " "+setsuzoku;
           var goo = goods;
           $count.text(ddd);
 
       });
-socket.on('goo', function(){
-  console.log(sums);
-});
+// socket.on('goo', function(){
+//   console.log(sums);
+//});
 
 
 
