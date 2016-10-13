@@ -1,14 +1,14 @@
 <?php
 session_start();
-include('func.php'); //外部ファイル読み込み（関数群の予定）
+include('functions.php'); //外部ファイル読み込み（関数群の予定）
 
 //1. 接続します
 $pdo = db();
 
 //２．データ登録SQL作成
-$stmt = $pdo->prepare("INSERT INTO gs_user_table(id, name, lid, lpw, kanri_flg, life_flg) VALUES(NULL, :3name, :lid, :lpw, 0, 0)");
+$stmt = $pdo->prepare("INSERT INTO gs_user_table(mail, name, lmail, lpw) VALUES(NULL, :3name, :lmail, :lpw)");
 $stmt->bindValue(':name', $_POST["name"]);
-$stmt->bindValue(':lid', $_POST["lid"]);
+$stmt->bindValue(':lmail', $_POST["lmail"]);
 $stmt->bindValue(':lpw', $_POST["lpw"]);
 $res = $stmt->execute();
 
@@ -38,4 +38,3 @@ exit();
 
 
 ?>
-

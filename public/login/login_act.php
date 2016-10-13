@@ -1,9 +1,26 @@
 <?php
 session_start();
-include('func.php'); //外部ファイル読み込み（関数群の予定）
+include('functions.php'); //外部ファイル読み込み（関数群の予定）
 
 //1. 接続します
-$pdo = db();
+// $pdo = db();
+
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$db['dbname'] = ltrim($db['path'], '/');
+$dsn = "mysql:host={$db['host']};dbname={$db['dbname']};charset=utf8";
+
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+
+$link = mysqli_connect($server, $username, $password, $db);
+
+$result = mysqli_query($link, "select * from user");
+echo $result;
+
+$pdo = new PDO($dsn, $db['user'], $db['pass']);
+
 
 //２．データ登録SQL作成
 $stmt = $pdo->prepare("SELECT * FROM gs_user_table WHERE lid=:lid AND lpw=:lpw");
@@ -37,4 +54,3 @@ exit();
 
 
 ?>
-

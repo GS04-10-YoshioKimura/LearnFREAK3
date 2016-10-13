@@ -33,7 +33,6 @@ io.on('connection', function(socket) {
 });
 
 
-
 var calcVote = function(calcclients) {
     var sums = {
         good: 0,
@@ -53,7 +52,7 @@ var calcVote = function(calcclients) {
     return sums;
     console.log(sums);
     // io.sockets.emit('goo', sums.good);
-    // console.log(sums.good);
+    console.log(sums.good);
 };
 
 server.listen(process.env.PORT || 3010, process.env.IP || "0.0.0.0", function() {

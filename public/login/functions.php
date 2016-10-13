@@ -2,7 +2,7 @@
 //DB接続
 function db(){
   try {
-    return new PDO('mysql:dbname=gs_db;charset=utf8;host=localhost','root','mtsm0505');
+    return new PDO('mysql:dbname=heroku_e960e5f905edb9d;charset=utf8;host=localhost','root','mtsm0505');
   } catch (PDOException $e) {
     exit('DbConnectError:'.$e->getMessage());
   }
@@ -39,7 +39,7 @@ function htmlEnc($value) {
 function db(){
 try {
 return new
-PDO('mysql:dbname=gs_db;charset=utf8;host=localhost','root','mtsm0505');
+PDO('mysql:dbname=heroku_e960e5f905edb9d;charset=utf8;host=localhost','root','mtsm0505');
 }catch (PDOException $e){
     exit('DbConnectError:'.$e->getMessage());
 }
@@ -57,4 +57,3 @@ function sessinCheck(){
 
 
 ?>
-

@@ -16,6 +16,7 @@
 }
 
 body {
+
     background: #f1fbfc !important;
     user-select: none;
     -o-user-select: none;
@@ -4943,7 +4944,7 @@ article.content-page {
 }
 
 .item-box-skyblue .title-box {
-    background-color: #21c7d3 !important;
+    background-color: #369DDE !important;
     color: #fff !important;
     border-radius: 4px 4px 0 0;
     padding: 15px 10px;
@@ -5822,6 +5823,8 @@ sub {
 }
 
 img {
+  position: absolute;
+    top: -9px;
     width: auto\9;
     height: auto;
     max-width: 100%;

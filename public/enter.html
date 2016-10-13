@@ -1,83 +1,106 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ページタイトル</title>
-<link rel="icon" type="image/png" href="./images/LearnFREAK01_32x32.png" width="200px" height="100px">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ページタイトル</title>
+    <link rel="icon" type="image/png" href="./images/LearnFREAK01_32x32.png" width="200px" height="100px">
 
-<!--CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-<!--JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<!--自作CSS -->
+    <!--CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <!--JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!--自作CSS -->
 <style type="text/css">
-/*ここに調整CSS記述*/
-
- body { padding-top: 70px; }
- body { padding-bottom: 70px; }
-    .navbar{
-        background:#CA5D18;
+    /*ここに調整CSS記述*/
+    
+    body {
+        padding-top: 70px;
     }
-    #main{
-        width:500px;
+    
+    body {
+        padding-bottom: 70px;
     }
-        p {
-          background:#CA5D18;
-          color:white;
-          padding:10px;
-          width:
-        }
-        a {
+    
+    .navbar {
+        background: #CA5D18;
+    }
+    
+    #main {
+        width: 500px;
+    }
+    
+    p {
+        background: #CA5D18;
+        border-radius: 5px;
+        color: white;
+        padding: 10px;
+        width:
+    }
+    
+    a {
         text-decoration: none;
-        }
-        a:link {
-            color: white;
-        }
-        a:visited {
-            color: white;
-        }
-        a:hover {
-            color: red;
-            cursor: pointer;
-        }
-        a:active {
-            color: white;
-        }
+    }
+    
+    a:link {
+        color: white;
+    }
+    
+    a:visited {
+        color: white;
+    }
+    
+    a:hover {
+        color: red;
+        cursor: pointer;
+    }
+    
+    a:active {
+        color: white;
+    }
 </style>
 </head>
 
 <body>
-<nav class="navbar navbar-fixed-top" role="navigation">
-  <div class="container">
-    <a class="navbar-brand" href="#">LEARN Freak</a>
-  </div>
-</nav>
-
-<div style="text-align:center;">
-        <div class="btn-group"  role="group">
-         <div id="main">
-
-            <p><a href="toppage.html">主催者</a></p>
-            <p><a href="index.html">参加者</a></p>
+    <nav class="navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- <a class="navbar-brand" href="#">LEARN Freak</a> -->
+            <img class="app-logo" src="./images/LF.png">
         </div>
+    </nav>
+
+    <div style="text-align:center;">
+        <div class="btn-group" role="group">
+            <div id="main">
+
+                <p><a href="toppage.html">主催者</a></p>
+                <p><a href="index.html">参加者</a></p>
+            </div>
         </div>
-      </div>
+    </div>
 
 
 
-<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-  <div class="container">
-  </div>
-</nav>
-        <!-- scripts we need -->
-    <script src="https://rawgit.com/riot/riot/master/riot%2Bcompiler.min.js"></script>
-   <!-- riot tags -->
-    <script type="riot/tag" src="owner.tag"></script>
+    <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+        <div class="container">
+        </div>
+    </nav>
 
-   <!-- mount this app -->
+</body>
+
+</html>
+
+
+    <!-- scripts we need -->
+    <!--    <script src="https://rawgit.com/riot/riot/master/riot%2Bcompiler.min.js"></script>-->
+    <!--    riot tags -->
+    <!--    <script type="riot/tag" src="owner.tag"></script>-->
+
+    <!-- mount this app -->
+    <!--
     <script>
 
     riot.compile(function() {
@@ -86,5 +109,4 @@
     })
 
     </script>
-</body>
-</html>
+-->
